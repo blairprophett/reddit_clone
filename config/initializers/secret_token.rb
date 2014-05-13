@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RedditClone::Application.config.secret_key_base = 'a0ca101643fd2fd2f981454c460c030a5660c7c0a6e8d65acee6e45cf66d161679ac28e7b8b7cb180974609e0e1fa43e49578b490235469d4fe1f6e2bfc2483f'
+RedditClone::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
