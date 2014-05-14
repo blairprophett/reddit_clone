@@ -1,0 +1,6 @@
+<p><%= @post.title %></p>
+<p><%= @comment.body %></p>
+<p>by: <%= @user.email %>
+<%=  link_to 'delete', [@post, @comment], method: :delete, data: {confirm: 'Are you sure?'} %>
+
+<%= link_to 'Back', post_comments_path(@post) %>

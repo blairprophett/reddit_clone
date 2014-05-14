@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+<p><%=@post.body%></p>
+
+<b>Comments:</b>
+<% @comments.each do |comment|%>
+  <li><%=comment.body%>
+      <%#= @user.email %>
+    <%= link_to "Show", post_comment_path(@post, comment) %>
+    <%= link_to "Delete", [@post, comment], method: :delete, data: {confirm: "Are You Sure?"} %>
+
+  </li>
+<% end %>
+<br>
+<%= link_to "Comment on this post", new_post_comment_path(@post), :class=>"btn btn-info" %>
+</p>

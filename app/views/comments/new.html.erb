@@ -1,0 +1,6 @@
+<h1>Comment On <%= @post.title %></h1>
+
+<%= form_for([@post, @comment]) do |f| %>
+    <%= f.text_field :body, placeholder: 'comment'%>
+    <%= f.submit :class=>"btn btn-success" %>
+<% end %>
